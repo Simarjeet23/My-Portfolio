@@ -190,6 +190,7 @@ img{
     left: 0;
 }
 
+  /*Active Menu*/
 .active{
     color: var(--text-color);
 }

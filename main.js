@@ -14,6 +14,30 @@ closeMenu.addEventListener('click', ()=>{
 })
 
 /*=== REMOVE MENU ===*/
+const navLink = document.querySelectorAll('.nav_link')
 
+function linkAction(){
+    navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=== SCROLL SELECTION ACTIVE LINK ===*/
+const section = document.querySelectorAll('section[id]')
+
+window.addEventListener('scroll', scrollActive)
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50
+        sectionId = current.getAttribute('id')
+
+        if(scroll > sectionTop && scrollY <= sectionTop +sectionHeight){
+            document.querySelector('.nav_menu a[href*='+ selectionId +']').classList.add('active')
+        }else{
+            document.querySelector('.nav_menu a[href*='+ selectionId +']').classList.remove('active')
+        }
+    })
+}
