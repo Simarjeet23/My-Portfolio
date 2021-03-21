@@ -437,7 +437,7 @@ img{
 }
 
 .services_content{
-    padding: 1.5rem;
+    padding: 1.5rem 0.5rem;
     border: 2px solid var(--first-color);
     border-radius: 0.5rem;
     text-align: center;
@@ -653,7 +653,7 @@ img{
     .works_container,
     .contact_container,
     .contact_inputs{
-        grid-template-columns: repeat(2 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .about_data{
